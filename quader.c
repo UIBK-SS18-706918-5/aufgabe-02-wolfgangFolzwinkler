@@ -5,12 +5,15 @@ int main(int argc, char ** argv) {
 	float a, b, c;
 
 	// Einlesen der Seitenlängen
-	a = atof(argv[1]);
+
+	
+float oberflaeche;
+if (argc == 4){
+        a = atof(argv[1]);
 	b = atof(argv[2]);
 	c = atof(argv[3]);
-
 	// Berechnung der Oberfläche
-	float oberflaeche = 0;
+	
 	oberflaeche += 2.*a*b;
 	oberflaeche += 2.*a*c;
 	oberflaeche += 2.*b*c;
@@ -20,4 +23,8 @@ int main(int argc, char ** argv) {
 		a, b, c, oberflaeche);
 
 	return 0;
+}
+else {
+printf("Inkorrekte Eingabe! Geben sie 3 Seitenlänge an!\n");
+}
 }
